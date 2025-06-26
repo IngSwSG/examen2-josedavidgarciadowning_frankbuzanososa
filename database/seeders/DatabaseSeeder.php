@@ -34,7 +34,11 @@ class DatabaseSeeder extends Seeder
 
         Unidad::factory(5)->create();
 
-        Presupuesto::factory(10)->create();
+        Presupuesto::factory(10)->create() ->each(function ($presupuesto): void{
+            Unidad::factory(5)->create([
+                'presupuestos' => $presupuesto->codigoPresupuesto
+            ]);
+        });
 
         Requisicion::factory(10)->create();
 
