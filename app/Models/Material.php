@@ -23,7 +23,8 @@ class Material extends Model
         'updated_at',
     ];
 
-    public function categoria(){
-        return $this->belongsTo(Categoria::class, 'idCategoria', 'categoria');
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class, 'categoria', 'idCategoria');
     }
 }
