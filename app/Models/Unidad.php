@@ -19,5 +19,9 @@ class Unidad extends Model
         'updated_at',
     ];
 
- 
+    public function presupuestos()
+    {
+        return $this->belongsTo(Presupuesto::class, 'presupuestos', 'codigoPresupuesto');
+    }
+
 }

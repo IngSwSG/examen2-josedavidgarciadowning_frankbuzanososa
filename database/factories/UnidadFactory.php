@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Unidad;
+use App\Models\Presupuesto;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,6 +21,7 @@ class UnidadFactory extends Factory
     {
         return [
             "nombre" => $this->faker->word(),
+            "presupuestos" => Presupuesto::factory()
         ];
     }
 }
