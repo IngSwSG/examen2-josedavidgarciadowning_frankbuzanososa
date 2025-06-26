@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\MaterialUnidad;
+use App\Models\Presupuesto;
+use App\Models\Requisicion;
 use App\Models\Categoria;
 use App\Models\Material;
 use App\Models\Unidad;
@@ -30,5 +33,11 @@ class DatabaseSeeder extends Seeder
         });
 
         Unidad::factory(5)->create();
+
+        Presupuesto::factory(10)->create();
+
+        Requisicion::factory(10)->create();
+
+        MaterialUnidad::factory(20)->create();
     }
 }
