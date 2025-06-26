@@ -13,13 +13,8 @@ return new class extends Migration
     {
         Schema::create('presupuesto', function (Blueprint $table) {
             $table->id('codigoPresupuesto');
-            $table->string('nombrePresupuesto');
-            
-            $table->unsignedBigInteger('idUnidad');
-
+            $table->string('nombrePresupuesto');       
             $table->timestamps();
-
-            $table->foreign('idUnidad')->references('idUnidad')->on('unidad')->onDelete('cascade');
         });
     }
 

@@ -14,7 +14,6 @@ class PresupuestoFactory extends Factory
     {
         return [
             'nombrePresupuesto' => $this->faker->words(3, true),
-            'idUnidad' => Unidad::inRandomOrder()->value('idUnidad') ?? Unidad::factory(),
         ];
     }
 }

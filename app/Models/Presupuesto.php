@@ -13,8 +13,7 @@ class Presupuesto extends Model
     protected $primaryKey = 'codigoPresupuesto';
 
     protected $fillable = [
-        'nombrePresupuesto',
-        'idUnidad',  // FK a Unidad
+        'nombrePresupuesto',       
     ];
 
     protected $hidden = [
@@ -22,10 +21,6 @@ class Presupuesto extends Model
         'updated_at',
     ];
 
-    public function unidad()
-    {
-        return $this->belongsTo(Unidad::class, 'idUnidad', 'idUnidad');
-    }
 
     public function materiales()
     {
