@@ -16,7 +16,7 @@ class MaterialUnidad extends Model
         'cantidad',
         'codigo',             // FK a Material
         'idUnidad',           // FK a Unidad
-        'codigoPresupuesto',  // FK a Presupuesto
+        'presupuesto',  // FK a Presupuesto
     ];
 
     protected $hidden = [
@@ -36,6 +36,6 @@ class MaterialUnidad extends Model
 
     public function presupuesto()
     {
-        return $this->belongsTo(Presupuesto::class, 'codigoPresupuesto', 'codigoPresupuesto');
+        return $this->belongsTo(Presupuesto::class, 'presupuesto', 'codigoPresupuesto');
     }
 }

@@ -17,13 +17,13 @@ return new class extends Migration
             
             $table->unsignedBigInteger('codigo'); 
             $table->unsignedBigInteger('idUnidad'); 
-            $table->unsignedBigInteger('codigoPresupuesto');
+            $table->unsignedBigInteger('presupuesto');
 
             $table->timestamps();
 
             $table->foreign('codigo')->references('codigo')->on('material')->onDelete('cascade');
             $table->foreign('idUnidad')->references('idUnidad')->on('unidad')->onDelete('cascade');
-            $table->foreign('codigoPresupuesto')->references('codigoPresupuesto')->on('presupuesto')->onDelete('cascade');
+            $table->foreign('presupuesto')->references('codigoPresupuesto')->on('presupuesto')->onDelete('cascade');
         });
     }
 

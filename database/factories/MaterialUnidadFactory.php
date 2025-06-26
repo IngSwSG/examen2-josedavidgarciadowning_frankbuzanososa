@@ -18,7 +18,7 @@ class MaterialUnidadFactory extends Factory
             'cantidad' => $this->faker->numberBetween(1, 100),
             'codigo' => Material::inRandomOrder()->value('codigo') ?? Material::factory(),
             'idUnidad' => Unidad::inRandomOrder()->value('idUnidad') ?? Unidad::factory(),
-            'codigoPresupuesto' => Presupuesto::inRandomOrder()->value('codigoPresupuesto') ?? Presupuesto::factory(),
+            'presupuesto' => Presupuesto::inRandomOrder()->value('presupuesto') ?? Presupuesto::factory(),
         ];
     }
 }
