@@ -24,7 +24,7 @@ test('obtenerListaDeMaterialesConCategorias_funcionaCorrectamente', function () 
 
     $response->assertJsonStructure([
         'data' => [
-            [
+            '*' => [
                 'codigo',
                 'descripcion',
                 'unidadMedida',
